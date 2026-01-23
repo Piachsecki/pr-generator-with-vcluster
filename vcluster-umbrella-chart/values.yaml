@@ -1,6 +1,7 @@
 # ArgoCD Configuration
 argocd:
   # ArgoCD authentication token for the vclusteradder service account
+  # When using in production, this should be a secret.
   authToken: ""
   
   # ArgoCD server URL
