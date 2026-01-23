@@ -16,7 +16,7 @@ spec:
         - |
           apt-get update
           apt-get install -y curl
-          curl -L https://github.com/argoproj/argo-cd/releases/download/v2.12.4/argocd-linux-amd64 -o /usr/bin/argocd
+          curl -L https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 -o /usr/bin/argocd
           chmod +x /usr/bin/argocd
           cp /vcluster/config/config /home/ubuntu/kubeconfig.yaml
           sed -i -e 's/localhost:8443/{{ .Release.Name }}.{{ .Release.Namespace }}/g' /home/ubuntu/kubeconfig.yaml
@@ -66,7 +66,7 @@ spec:
         - |
           apt-get update
           apt-get install -y curl
-          curl -L https://github.com/argoproj/argo-cd/releases/download/v2.12.4/argocd-linux-amd64 -o /usr/bin/argocd
+          curl -L https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 -o /usr/bin/argocd
           chmod +x /usr/bin/argocd
           cp /vcluster/config/config /home/ubuntu/kubeconfig.yaml
           sed -i -e 's/localhost:8443/{{ .Release.Name }}.{{ .Release.Namespace }}/g' /home/ubuntu/kubeconfig.yaml
