@@ -11,6 +11,7 @@ spec:
       github:
         owner: kostis-codefresh
         repo: preview-env-source-code
+        appSecretName: github-app-secret
       requeueAfterSeconds: 180
   template:
     metadata:
