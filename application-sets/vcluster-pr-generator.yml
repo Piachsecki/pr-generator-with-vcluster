@@ -9,7 +9,7 @@ spec:
   generators:
   - pullRequest:
       github:
-        owner: kostis-codefresh
+        owner: Piachsecki
         repo: preview-env-source-code
       requeueAfterSeconds: 180
   template:
@@ -26,7 +26,6 @@ spec:
           releaseName: '{{.head_short_sha_7}}-vcluster-{{.branch}}'
           valuesObject:
             argocd:
-              authToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJ2Y2x1c3RlcmFkZGVyOmFwaUtleSIsIm5iZiI6MTcyOTI3MTUzMiwiaWF0IjoxNzI5MjcxNTMyLCJqdGkiOiIzMGUzNGFlOC1mZGFkLTQ3NWMtYTY3MC1lYWU4ZDVmNTgxNmIifQ.KY95NLTfBwcA8-Blsulok20XAArktE6Oyn5UsQ_43zw"
               serverUrl: "argocd-server.argocd"
             controlPlane:
               advanced:

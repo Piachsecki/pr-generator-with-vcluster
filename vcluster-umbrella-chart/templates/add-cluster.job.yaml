@@ -35,7 +35,10 @@ spec:
             --annotation head_short_sha_7={{ .Values.controlPlane.advanced.globalMetadata.annotations.head_short_sha_7 }}
         env:
         - name: ARGOCD_AUTH_TOKEN
-          value: {{ .Values.argocd.authToken }}
+          valueFrom:
+            secretKeyRef:
+              name: vcluster-adder-token  # Nazwa Secretu z Kroku 1
+              key: token                  # Klucz wewnątrz Secretu
         - name: ARGOCD_SERVER_URL
           value: {{ .Values.argocd.serverUrl }}
         volumeMounts:
@@ -73,7 +76,10 @@ spec:
           argocd cluster rm {{ .Release.Name }}
         env:
         - name: ARGOCD_AUTH_TOKEN
-          value: {{ .Values.argocd.authToken }}
+          valueFrom:
+            secretKeyRef:
+              name: vcluster-adder-token  # Nazwa Secretu z Kroku 1
+              key: token                  # Klucz wewnątrz Secretu
         - name: ARGOCD_SERVER_URL
           value: {{ .Values.argocd.serverUrl }}
       restartPolicy: OnFailure

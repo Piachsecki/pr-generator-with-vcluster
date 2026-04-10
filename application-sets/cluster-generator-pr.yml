@@ -16,7 +16,7 @@ spec:
       name: 'myapp-{{.nameNormalized}}'
     spec:
       source:
-        repoURL: 'https://github.com/kostis-codefresh/preview-env-manifests.git'
+        repoURL: 'https://github.com/Piachsecki/preview-env-manifests.git'
         targetRevision: HEAD
         path: kustomize-preview-app/
         kustomize:
